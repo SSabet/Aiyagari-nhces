@@ -5,7 +5,7 @@ par.rho = 0.05; % discount rate
 par.eta = 0.0; % HRRA parameter
 
 % choose country from LIC (low-income country), MIC, HIC
-country = "LIC";
+country = "MIC";
 
 par.alph = .3; % capital intensity
 par.del = 0.1; % depreciation
@@ -73,7 +73,7 @@ aa = [a,a];
 % function which computes the excess demand for capital as a function of the interest rate
 exd = @(r) exd_NHCES(par, r); 
 
-r0 = 0.04; % initial guess for the interest rate
+r0 = 0.025; % initial guess for the interest rate
 
 tic;
 options=optimset('MaxIter', 20, 'Display', 'iter', 'PrecondBandWidth', 1,'TolFun', 1e-5,'TolX',1e-7);
